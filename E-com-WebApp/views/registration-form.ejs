@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Signup</title>
+
+</head>
+<style>
+    .bg{
+       display: flexbox;
+       background-color:antiquewhite;
+    }
+</style>
+
+<body class="bg">
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIMceDOFQc9n0vE_Fs5HEhxLN2DZ6oYTho04FAYnIY6Q&usqp=CAU&ec=48665698" alt=""> -->
+    <div class="container">
+        <div class="row  justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <div class="container bg-white rounded my-5 px-0">
+                    <div class="py-2 bg-danger text-white">
+                        <h3 style="text-align: center;">REGISTRATION</h3>
+                    </div>
+                    <p class="msg-p text-center">
+                        <%=(typeof alertMsg!='undefined' )? alertMsg:''%>
+                    </p>
+                    <div class="mt-1 " style="text-align: center;">
+                        <img src="images/register-icon.png" width="100px" alt="">
+                    </div>
+                    <form action="/register" method="post">
+                        <div class="py-2 mx-5">
+                            <input type="text" class="form-control  border-info" placeholder="Enter full name" name="name" required>
+                        </div>
+                        <div class="py-2 mx-5">
+                            <input type="email" class="form-control  border-info" placeholder="Enter Email Address" name="email" required>
+                        </div>
+                        <div class="py-2 mx-5">
+                            <input type="number" class="form-control  border-info" placeholder="Enter Phone number" name="phone" required>
+                        </div>
+                        <div class="py-2 mx-5">
+                            <div class="form-control border-info" >
+                                <input type="radio" id="check-male" name="gender" value="Male" />
+                                <label for="check-male">Male</label>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                             
+                                <input type="radio" id="check-female" name="gender" value="Female" />
+                                <label for="check-female">Female</label>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                             
+                                <input type="radio" id="check-other" name="gender" value="Other" />
+                                <label for="check-other">Other</label>
+                                <span>&nbsp;</span>
+                            </div>
+                        </div>
+                        <div class="py-2 mx-5">
+                            <input type="password" class="form-control  border-info" placeholder="Enter password" name="password" required>
+                        </div>
+                        <div class="py-2 mx-5">
+                            <input type="password" class="form-control  border-info" placeholder="Confirm password" name="confirm_password" required >
+                        </div>
+                        
+                        <div class="py-2 mx-5 ">
+                            <input type="submit" class="form-control btn-success text-white" value="REGISTRATION ">
+                        </div>
+                        <div class="py-2 mx-5 ">
+                            <a href="/login" style="text-decoration: none;"> <input type="button"
+                                    class="form-control btn-info text-white mb-3" value="LOGIN "></a>
+                        </div>
+                        <!-- <img src="C:\Users\ASUS\Downloads\5218594.jpg" alt=""> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
